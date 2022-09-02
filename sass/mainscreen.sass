@@ -1,0 +1,181 @@
+.mainscreen
+    display: flex
+    justify-content: center
+    background: url('../img/mainscreen-bg-1.png') center no-repeat
+    background-size: cover
+    &__container
+        width: 1220px
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        margin-top: 105px
+        font-family: Montserrat
+        font-style: normal
+        font-weight: 300
+        font-size: 30px
+        line-height: 37px
+        text-align: center
+        text-transform: uppercase
+        color: #FFFFFF
+    &__subtitle
+        margin-top: 18px
+        font-family: Montserrat
+        font-style: normal
+        font-weight: 300
+        font-size: 20px
+        line-height: 66.9%
+        color: #FFFFFF
+    &__logo
+        margin-top: 29px
+    &__underlogo
+        margin-top: 48px
+        font-family: Montserrat
+        font-style: normal
+        font-weight: 300
+        font-size: 20px
+        line-height: 125.9%
+        text-align: center
+        font-variant: small-caps
+        color: #FFFFFF
+    &__subtitle-mobile
+        display: none
+    &__form
+        margin-top: 18px
+        display: flex
+        margin-bottom: 277px
+        &__block
+            display: flex
+            flex-direction: column
+            margin-right: 45px
+            &__label
+                font-family: Montserrat
+                font-style: normal
+                font-weight: normal
+                font-size: 23px
+                line-height: 28px
+                color: #FFFFFF
+            input
+                margin-top: 2px
+                width: 349px
+                padding-top: 11px
+                padding-bottom: 12px
+                padding-left: 14px
+                font-family: Montserrat
+                font-style: normal
+                font-weight: 500
+                font-size: 20px
+                line-height: 24px
+                color: #BEBDBD
+                border-radius: 10px
+                border: 0.2px solid #00445B
+        &__button
+            display: flex
+            button
+                font-family: Montserrat
+                font-style: normal
+                font-weight: normal
+                font-size: 30px
+                line-height: 106.9%
+                text-align: center
+                text-transform: uppercase
+                color: #FFFFFF
+                padding: 8px 76px
+                border: 1px solid #FFED00
+                border-radius: 10px
+                align-self: flex-end
+                background: transparent
+                transition: all 0.3s
+                &:hover
+                    transition: all 0.3s
+                    background: #FFED00
+@media( max-width: 1440px )
+    .mainscreen
+        background: url('../img/mainscreen-bg-2.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 1024px
+        &__form
+            margin-bottom: 177px
+@media( max-width: 1024px ) 
+    .mainscreen
+        background: url('../img/mainscreen-bg-3.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 834px
+        &__title
+            margin-top: 115px
+            width: 621px
+        &__subtitle
+            margin-top: 29px
+        &__logo
+            margin-top: 24px
+        &__underlogo
+            margin-top: 23px
+        &__form
+            flex-direction: column
+            margin-top: 0
+            margin-bottom: 340px
+            &__block
+                margin-right: 0
+                margin-top: 9px
+            &__button
+                margin-top: 21px
+@media( max-width: 833px ) 
+    .mainscreen
+        background: url('../img/mainscreen-bg-4.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 768px
+@media( max-width: 767px ) 
+     .mainscreen
+        background: url('../img/mainscreen-bg-5.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 414px
+        &__title
+            margin-top: 80px
+            width: 284px
+            line-height: 24px
+            font-size: 20px
+        &__subtitle
+            display: none
+        &__logo
+            margin-top: 15px
+            img
+                width: 232px
+        &__underlogo
+            display: none
+        &__subtitle-mobile
+            display: block
+            font-family: Montserrat
+            font-style: normal
+            font-weight: 300
+            font-size: 16px
+            line-height: 66.9%
+            text-align: center
+            color: #FFFFFF
+            margin-top: 24px
+            width: 300px
+            margin-bottom: 150px
+        &__form
+            display: none
+@media( max-width: 414px ) 
+    .mainscreen
+        background: url('../img/mainscreen-bg-6.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 320px
+@media( max-width: 320px ) 
+    .mainscreen
+        background: url('../img/mainscreen-bg-7.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 95%
+
+
+
+
+
+
+    

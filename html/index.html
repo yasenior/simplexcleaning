@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Simplex Cleaning</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+  </head>
+  <body>
+    <div class="header" id="header">
+      <div class="header__container">
+        <div class="header__logo"><img src="../img/header-logo.png" alt=""/></div>
+        <ul class="header__nav">
+          <li class="header__nav__item"><a href="#about_us">О нас</a></li>
+          <li class="header__nav__item"><a href="">Услуги</a></li>
+          <li class="header__nav__item"><a href="">Отзывы</a></li>
+          <li class="header__nav__item"><a href="">Контакты</a></li>
+          <li class="header__nav__item"><a href="">вакансии</a></li>
+        </ul>
+        <div class="header__social-media"><a href=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M33.9525 0H5.82709C2.614 0 0 2.614 0 5.82709V33.9525C0 37.1656 2.614 39.7796 5.82709 39.7796H18.7244V25.6392H14.4512V17.4813H18.7244V12.8196C18.7244 8.964 21.8613 5.82709 25.7169 5.82709H32.3209V13.985H26.8823V17.4813H32.5771L30.9455 25.6392H26.8823V39.7796H33.9525C37.1656 39.7796 39.7796 37.1656 39.7796 33.9525V5.82709C39.7796 2.614 37.1656 0 33.9525 0Z" fill="white" fill-opacity="0.8"/><path d="M29.7371 19.8119H24.5546V11.654H29.9932V8.15771H25.72C23.1494 8.15771 21.0584 10.2488 21.0584 12.8194V19.8119H16.7852V23.3081H21.0584V39.7794H24.5546V23.3081H29.0378L29.7371 19.8119Z" fill="white" fill-opacity="0.8"/></svg></a><a href=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.6058 19.8898C23.6058 21.8206 22.0404 23.3861 20.1095 23.3861C18.1787 23.3861 16.6133 21.8206 16.6133 19.8898C16.6133 17.959 18.1787 16.3936 20.1095 16.3936C22.0404 16.3936 23.6058 17.959 23.6058 19.8898Z" fill="white" fill-opacity="0.8"/><path d="M26.0142 9.32324H14.2046C11.634 9.32324 9.54297 11.4143 9.54297 13.9849V25.7945C9.54297 28.3651 11.634 30.4562 14.2046 30.4562H26.0142C28.5848 30.4562 30.6759 28.3651 30.6759 25.7945V13.9849C30.6759 11.4143 28.5848 9.32324 26.0142 9.32324ZM20.1094 25.7168C16.8963 25.7168 14.2823 23.1028 14.2823 19.8897C14.2823 16.6766 16.8963 14.0626 20.1094 14.0626C23.3225 14.0626 25.9365 16.6766 25.9365 19.8897C25.9365 23.1028 23.3225 25.7168 20.1094 25.7168ZM26.7912 14.3734C26.1474 14.3734 25.6257 13.8517 25.6257 13.208C25.6257 12.5643 26.1474 12.0426 26.7912 12.0426C27.4349 12.0426 27.9566 12.5643 27.9566 13.208C27.9566 13.8517 27.4349 14.3734 26.7912 14.3734Z" fill="white" fill-opacity="0.8"/><path d="M29.5096 0H10.7075C4.92412 0 0.21875 4.70537 0.21875 10.4888V29.2908C0.21875 35.0742 4.92412 39.7796 10.7075 39.7796H29.5096C35.293 39.7796 39.9983 35.0742 39.9983 29.2908V10.4888C39.9983 4.70537 35.293 0 29.5096 0ZM33.0058 25.7946C33.0058 29.6502 29.8689 32.7871 26.0133 32.7871H14.2038C10.3482 32.7871 7.21126 29.6502 7.21126 25.7946V13.985C7.21126 10.1294 10.3482 6.99251 14.2038 6.99251H26.0133C29.8689 6.99251 33.0058 10.1294 33.0058 13.985V25.7946Z" fill="white" fill-opacity="0.8"/></svg></a></div>
+        <div class="header__burger"><span></span></div>
+      </div>
+      <div class="header__burger-menu">
+        <ul class="header__burger-menu__list">
+          <li class="header__burger-menu__list__item"><a class="header__burger-menu__list__item__link" href="#about_us">О нас</a></li>
+          <li class="header__burger-menu__list__item"><a class="header__burger-menu__list__item__link" href="#">Услуги</a></li>
+          <li class="header__burger-menu__list__item"><a class="header__burger-menu__list__item__link" href="#">Услуги</a></li>
+          <li class="header__burger-menu__list__item"><a class="header__burger-menu__list__item__link" href="#">Контакты</a></li>
+          <li class="header__burger-menu__list__item"><a class="header__burger-menu__list__item__link" href="#">вакансии</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mainscreen">
+      <div class="mainscreen__container">
+        <div class="mainscreen__title">клининг для тех, кто ценит своё время </div>
+        <div class="mainscreen__subtitle">Широкий спектр услуг по уборке всех видов помещений. </div>
+        <div class="mainscreen__logo"><img src="../img/mainscreen-logo.png" alt="Логотип"/></div>
+        <div class="mainscreen__underlogo">Для заказа услуги или консультации заполните форму</div>
+        <div class="mainscreen__subtitle-mobile">Широкий спектр услуг по уборке всех видов помещений.</div>
+        <form class="mainscreen__form">
+          <div class="mainscreen__form__block">
+            <div class="mainscreen__form__block__label">Имя</div>
+            <input/>
+          </div>
+          <div class="mainscreen__form__block">
+            <div class="mainscreen__form__block__label">Телефон</div>
+            <input/>
+          </div>
+          <div class="mainscreen__form__button">
+            <button>отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="about-us" id="about_us">
+      <div class="about-us__container">
+        <div class="about-us__info">
+          <div class="about-us__top">
+            <div class="about-us__top__block"></div>
+          </div>
+          <div class="about-us__middle">
+            <div class="about-us__middle__block-blue"></div>
+            <div class="about-us__middle__txt">Компания<br> «<span>SIMplex cleaning</span>»<br> оказывает клининговые услуги всех видов помещений для физических и юридических лиц. Если вам нужно убрать в помещении после ремонта, подготовить квартиру к появлению малыша, поддерживать чистоту и порядок в офисе или дома - наши специалисты вам помогут. Мы берем на себя полную ответственность за имущество в месте проведения работ с возмещением ущерба</div>
+            <div class="about-us__middle__block-yellow"> </div>
+          </div>
+          <div class="about-us__bottom">
+            <div class="about-us__bottom__block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="advantages">
+      <div class="advantages__container">
+        <ul class="advantages__list">
+          <li class="advantages__list__item advantages__list__item-1">
+            <div class="advantages__list__item__image"><img src="../img/adv-1.png" alt=""/></div>
+            <div class="advantages__list__item__title">Профессиональная<br>техника</div>
+            <div class="advantages__list__item__txt">Мы работаем<br>с профессиональной<br>техникой и химией<br>ведущих<br>производителей</div>
+          </li>
+          <li class="advantages__list__item">
+            <div class="advantages__list__item__image"><img src="../img/adv-2.png" alt=""/></div>
+            <div class="advantages__list__item__title">Обученный<br>персонал</div>
+            <div class="advantages__list__item__txt">Наши клинеры знают<br>как очистить любую<br>поверхность быстро и<br>качественно, не<br>повредив ее</div>
+          </li>
+          <li class="advantages__list__item">
+            <div class="advantages__list__item__image"><img src="../img/adv-3.png" alt=""/></div>
+            <div class="advantages__list__item__title">Всегда на связи</div>
+            <div class="advantages__list__item__txt-2">Наша команда<br>готова принять ваш<br>заказ в любое<br>время, на связи 24/7</div>
+          </li>
+          <li class="advantages__list__item">
+            <div class="advantages__list__item__image"><img src="../img/adv-4.png" alt=""/></div>
+            <div class="advantages__list__item__title">Довольные клиенты</div>
+            <div class="advantages__list__item__txt-2">Большое<br>количество<br>отзывов от наших<br>клиентов</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="services">
+      <div class="services__container">
+        <div class="services__title">виды услуг</div>
+        <div class="services__subtitle">весь спектр клининговых услуг</div>
+        <div class="services__double">
+          <div class="services__double__block">
+            <div class="services__double__block__image"><img src="../img/serv-1.png" alt=""/></div>
+            <div class="services__double__block__title">Поддерживающая уборка </div>
+            <div class="services__double__block__subtitle">от 50₽ кв м</div>
+            <div class="services__double__block__button"><a class="popup__open__link" href="#support">
+                <button>подробнее</button></a></div>
+          </div>
+          <div class="services__double__block">
+            <div class="services__double__block__image"><img src="../img/serv-2.png" alt=""/></div>
+            <div class="services__double__block__title">Генеральная уборка</div>
+            <div class="services__double__block__subtitle">от 100₽ кв м</div>
+            <div class="services__double__block__button"><a class="popup__open__link" href="#general">
+                <button>подробнее</button></a></div>
+          </div>
+        </div>
+        <div class="services__double">
+          <div class="services__double__block">
+            <div class="services__double__block__image"><img src="../img/serv-3.png" alt=""/></div>
+            <div class="services__double__block__title">Уборка после ремонта</div>
+            <div class="services__double__block__subtitle">от 120₽ кв м</div>
+            <div class="services__double__block__button"><a class="popup__open__link" href="#after">
+                <button>подробнее</button></a></div>
+          </div>
+          <div class="services__double__block">
+            <div class="services__double__block__image"><img src="../img/serv-4.png" alt=""/></div>
+            <div class="services__double__block__title">Мойка окон</div>
+            <div class="services__double__block__button-2"><a class="popup__open__link" href="#windows">
+                <button>подробнее</button></a></div>
+          </div>
+        </div>
+        <div class="services__one">
+          <div class="services__one__image"><img src="../img/serv-5.png" alt=""/></div>
+          <div class="services__one__title">Уборка офисов и коммерческих помещений</div>
+          <div class="services__one__subtitle"> от 80₽ кв м </div>
+          <div class="services__one__button"><a class="popup__open__link" href="#office">
+              <button>подробнее</button></a></div>
+        </div>
+        <div class="services__one-mobile">
+          <div class="services__one-mobile__image"><img src="../img/serv-6.png" alt=""/></div>
+          <div class="services__one-mobile__title">Уборка офисов и коммерческих помещений</div>
+          <div class="services__one-mobile__subtitle"> от 80₽ кв м </div>
+          <div class="services__one-mobile__button"><a class="popup__open__link" href="#office">
+              <button>подробнее</button></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="colors">
+      <div class="colors__container">
+        <div class="colors__title">Цветовое кодирование</div>
+        <div class="colors__txt">
+          <div class="colors__txt__block">В нашей компании клинеры обучены основам цветного кодирования и используют его в работе. Вы сможете проконтролировать использование инвентаря и протирочного материала и быть уверены в гигиеничности уборки</div>
+          <div class="colors__txt__block">Цветовое кодирование позволяет избежать перекрестного загрязнения,  делает сам процесс уборки наиболее эффективным и поддерживает гигиену в тех местах, где производится уборка. </div>
+        </div>
+        <div class="colors__points"> 
+          <div class="colors__points__block">
+            <div class="colors__points__block__point">
+              <div class="colors__points__block__point__image"><img src="../img/color-1.svg" alt=""/></div>
+              <div class="colors__points__block__point__txt">Красный инвентарь и протирочные материалы используют в наиболее загрязнённых зонах, с большим количеством бактерий: санузел, душевые. </div>
+            </div>
+            <div class="colors__points__block__point">
+              <div class="colors__points__block__point__image"><img src="../img/color-2.svg" alt=""/></div>
+              <div class="colors__points__block__point__txt">Зелёный предназначен для уборки мест приготовления пищи, продуктовых отделов в магазине и на пищевом производстве. </div>
+            </div>
+          </div>
+          <div class="colors__points__block">
+            <div class="colors__points__block__point">
+              <div class="colors__points__block__point__image"><img src="../img/color-3.svg" alt=""/></div>
+              <div class="colors__points__block__point__txt">Желтый цвет используют для иных поверхностей в санитарных зонах: шкафы, стены, перегородки, диспенсеры.</div>
+            </div>
+            <div class="colors__points__block__point">
+              <div class="colors__points__block__point__image"><img src="../img/color-4.svg" alt=""/></div>
+              <div class="colors__points__block__point__txt">Синий цвет применяют для очищения полезной и транспортной зоны: мебель, оргтехника, коридоры, двери, лифты, перегородки, поручни, окна. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cases">
+      <div class="cases__container">
+        <div class="cases__title">наша работа</div>
+        <div class="cases__subtitle">клинеры предоставляют лучший уровень сервиса</div><a class="cases__link" href="#popupcases">посмотреть работы</a>
+      </div>
+    </div>
+    <div class="reviews">
+      <div class="reviews__container"> 
+        <div class="reviews__title">отзывы</div>
+        <div class="reviews__subtitle">В качестве нашей работы вы можете убедиться сами</div>
+        <div class="reviews__reviews">
+          <div class="reviews__reviews__review">
+            <div class="reviews__reviews__review__txt">Доброго Вам дня! Большое вам спасибо за интерес к обратной связи!! И я с уверенностью могу сказать, что результат вашей Уборки просто бесподобен! Чувствуется профессионализм и грамотный подход на всех уровнях. Все было сделано качественно и быстро, однозначно буду обращаться снова и снова! И друзьям от души порекомендую!!!!</div>
+            <div class="reviews__reviews__review__name">Марина</div>
+            <div class="reviews__reviews__review__logo"><img src="../img/reviews-logo.png" alt=""/></div>
+          </div>
+          <div class="reviews__reviews__review reviews__reviews__review-right">
+            <div class="reviews__reviews__review__txt">Я вам даже только за микроволновку с холодильником могу отдельное огромнейшее спасибо сказать.У меня так чисто не было с момента моего приезда сюда. нет слов) вы даже не представляете как мне облегчили сейчас жизнь))))) Огромное спасибо!)) Обязательно к вам буду обращаться)))</div>
+            <div class="reviews__reviews__review__name">владимир</div>
+            <div class="reviews__reviews__review__logo-left"><img src="../img/reviews-logo.png" alt=""/></div>
+          </div>
+          <div class="reviews__reviews__review">
+            <div class="reviews__reviews__review__txt">Ребята, огромное спасибо за ваш труд, подход и абсолютную клиентоориентированность. Желаю вам развития и процветания. Теперь если уборка, то только к вам и с вами.</div>
+            <div class="reviews__reviews__review__name">светлана</div>
+            <div class="reviews__reviews__review__logo"><img src="../img/reviews-logo.png" alt=""/></div>
+          </div>
+          <div class="reviews__reviews__review reviews__reviews__review-right">
+            <div class="reviews__reviews__review__txt">Спасибо за качественную уборку. Все просто отлично! Девочки , как пчелки трудились с утра и до самого вечера, убирая каждый уголок. Я очень довольна результатом. Буду вас рекомендовать знакомым. </div>
+            <div class="reviews__reviews__review__name">ирина</div>
+            <div class="reviews__reviews__review__logo-left"><img src="../img/reviews-logo.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-slider">
+      <div class="reviews-slider__container">
+        <div class="reviews-slider__title">отзывы</div>
+        <div class="reviews-slider__subtitle">В качестве нашей работы вы можете убедиться сами</div>
+        <div class="slider">
+          <div class="slider__slide">
+            <div class="slider__slide__txt">Доброго Вам дня! Большое вам спасибо за интерес к обратной связи!! И я с уверенностью могу сказать, что результат вашей Уборки просто бесподобен! Чувствуется профессионализм и грамотный подход на всех уровнях. Все было сделано качественно и быстро, однозначно буду обращаться снова и снова! И друзьям от души порекомендую!!!!</div>
+            <div class="slider__slide__name">Марина</div>
+            <div class="slider__slide__logo"><img src="../img/slider-logo.png" alt=""/></div>
+          </div>
+          <div class="slider__slide">
+            <div class="slider__slide__txt">Я вам даже только за микроволновку с холодильником могу отдельное огромнейшее спасибо сказать.У меня так чисто не было с момента моего приезда сюда. нет слов) вы даже не представляете как мне облегчили сейчас жизнь))))) Огромное спасибо!)) Обязательно к вам буду обращаться)))</div>
+            <div class="slider__slide__name">владимир</div>
+            <div class="slider__slide__logo"><img src="../img/slider-logo.png" alt=""/></div>
+          </div>
+          <div class="slider__slide">
+            <div class="slider__slide__txt">Ребята, огромное спасибо за ваш труд, подход и абсолютную клиентоориентированность. Желаю вам развития и процветания. Теперь если уборка, то только к вам и с вами.</div>
+            <div class="slider__slide__name">светлана</div>
+            <div class="slider__slide__logo"><img src="../img/slider-logo.png" alt=""/></div>
+          </div>
+          <div class="slider__slide">
+            <div class="slider__slide__txt">Ребята, огромное спасибо за ваш труд, подход и абсолютную клиентоориентированность. Желаю вам развития и процветания. Теперь если уборка, то только к вам и с вами.</div>
+            <div class="slider__slide__name">ирина</div>
+            <div class="slider__slide__logo"><img src="../img/slider-logo.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form">
+      <div class="form__container">
+        <div class="form__info">
+          <div class="form__info__txt">Хочешь стать частью нашей команды отправь заявку, и наши специалисты свяжутся с вами в ближайшее время для консультации </div>
+          <div class="form__info__call">или позвоните по номеру:</div><a class="form__info__tell" href="tel:+79856950505">8(985)695-05-05</a>
+        </div>
+        <form class="form__form">
+          <div class="form__form__block">
+            <div class="form__form__block__label">Имя</div>
+            <input type="text"/>
+          </div>
+          <div class="form__form__block">
+            <div class="form__form__block__label">Телефон</div>
+            <input type="text"/>
+          </div>
+          <div class="form__form__area">
+            <div class="form__form__area__label">Комментарий</div>
+            <textarea name="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="form__form__button">
+            <button>отправить </button>
+          </div>
+        </form>
+        <div class="form__call-mobile">
+          <div class="form__call-mobile__txt">или позвоните по номеру:</div><a class="form__call-mobile__tell" href="tel:+79856950505">8(985)695-05-05</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer__container">
+        <div class="footer__logos">
+          <div class="footer__logos__logo-1"><img src="../img/footer-logo-1.png" alt=""/></div>
+          <div class="footer__logos__logo-2"> <img src="../img/footer-logo-2.png" alt=""/></div>
+        </div>
+        <div class="footer__content">
+          <div class="footer__info">
+            <div class="footer__info__txt">клининг для тех, кто ценит своё время </div>
+            <div class="footer__info__links">
+              <ul class="footer__info__links__list">
+                <li class="footer__info__links__list__item"> <a href="">О нас</a></li>
+                <li class="footer__info__links__list__item"> <a href="">Услуги</a></li>
+                <li class="footer__info__links__list__item"> <a href="">Отзывы</a></li>
+                <li class="footer__info__links__list__item"> <a href="">Контакты</a></li>
+                <li class="footer__info__links__list__item"> <a href="">вакансии</a></li>
+              </ul>
+              <div class="footer__info__links__social-media"><a class="footer__info__links__social-media__link" href=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M33.9525 0H5.82709C2.614 0 0 2.614 0 5.82709V33.9525C0 37.1656 2.614 39.7796 5.82709 39.7796H18.7244V25.6392H14.4512V17.4813H18.7244V12.8196C18.7244 8.964 21.8613 5.82709 25.7169 5.82709H32.3209V13.985H26.8823V17.4813H32.5771L30.9455 25.6392H26.8823V39.7796H33.9525C37.1656 39.7796 39.7796 37.1656 39.7796 33.9525V5.82709C39.7796 2.614 37.1656 0 33.9525 0Z" fill="white" fill-opacity="0.8"/><path d="M29.7371 19.8119H24.5546V11.654H29.9932V8.15771H25.72C23.1494 8.15771 21.0584 10.2488 21.0584 12.8194V19.8119H16.7852V23.3081H21.0584V39.7794H24.5546V23.3081H29.0378L29.7371 19.8119Z" fill="white" fill-opacity="0.8"/></svg></a><a class="footer__info__links__social-media__link" href=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.6058 19.8898C23.6058 21.8206 22.0404 23.3861 20.1095 23.3861C18.1787 23.3861 16.6133 21.8206 16.6133 19.8898C16.6133 17.959 18.1787 16.3936 20.1095 16.3936C22.0404 16.3936 23.6058 17.959 23.6058 19.8898Z" fill="white" fill-opacity="0.8"/><path d="M26.0142 9.32324H14.2046C11.634 9.32324 9.54297 11.4143 9.54297 13.9849V25.7945C9.54297 28.3651 11.634 30.4562 14.2046 30.4562H26.0142C28.5848 30.4562 30.6759 28.3651 30.6759 25.7945V13.9849C30.6759 11.4143 28.5848 9.32324 26.0142 9.32324ZM20.1094 25.7168C16.8963 25.7168 14.2823 23.1028 14.2823 19.8897C14.2823 16.6766 16.8963 14.0626 20.1094 14.0626C23.3225 14.0626 25.9365 16.6766 25.9365 19.8897C25.9365 23.1028 23.3225 25.7168 20.1094 25.7168ZM26.7912 14.3734C26.1474 14.3734 25.6257 13.8517 25.6257 13.208C25.6257 12.5643 26.1474 12.0426 26.7912 12.0426C27.4349 12.0426 27.9566 12.5643 27.9566 13.208C27.9566 13.8517 27.4349 14.3734 26.7912 14.3734Z" fill="white" fill-opacity="0.8"/><path d="M29.5096 0H10.7075C4.92412 0 0.21875 4.70537 0.21875 10.4888V29.2908C0.21875 35.0742 4.92412 39.7796 10.7075 39.7796H29.5096C35.293 39.7796 39.9983 35.0742 39.9983 29.2908V10.4888C39.9983 4.70537 35.293 0 29.5096 0ZM33.0058 25.7946C33.0058 29.6502 29.8689 32.7871 26.0133 32.7871H14.2038C10.3482 32.7871 7.21126 29.6502 7.21126 25.7946V13.985C7.21126 10.1294 10.3482 6.99251 14.2038 6.99251H26.0133C29.8689 6.99251 33.0058 10.1294 33.0058 13.985V25.7946Z" fill="white" fill-opacity="0.8"/></svg></a></div>
+            </div>
+          </div>
+          <form class="footer__form">
+            <div class="footer__form__txt">Для заказа услуги или консультации заполните форму</div>
+            <div class="footer__form__block">
+              <div class="footer__form__block__label">Имя</div>
+              <input type="text"/>
+            </div>
+            <div class="footer__form__block">
+              <div class="footer__form__block__label">Телефон</div>
+              <input type="text"/>
+            </div>
+            <div class="footer__form__button">
+              <button>отправить</button>
+            </div>
+          </form>
+          <div class="footer__logo-2">
+            <div class="footer__logo-2__image"><img src="../img/footer-logo-2.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="support" id="support">
+      <div class="support__body">
+        <div class="support__content"><a class="support__content__close" href="#header"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.6"><path d="M31.5513 2.84106L29.3409 0.656839C28.7427 0.0587079 27.7545 0.0587079 27.1304 0.656839L16.104 11.683L4.86976 0.448793C4.27137 -0.149598 3.28315 -0.149598 2.65928 0.448793L0.448793 2.65928C-0.149598 3.25741 -0.149598 4.24562 0.448793 4.86976L11.6572 16.0782L0.656839 27.1306C0.0587079 27.7288 0.0587079 28.717 0.656839 29.3411L2.86732 31.5516C3.46545 32.1497 4.45367 32.1497 5.07781 31.5516L16.104 20.5252L27.1304 31.5516C27.7285 32.1497 28.7167 32.1497 29.3409 31.5516L31.5513 29.3411C32.1495 28.743 32.1495 27.7548 31.5513 27.1306L20.4989 16.1042L31.5253 5.07807C32.1495 4.45341 32.1495 3.46519 31.5513 2.84106Z" fill="white"/></g></svg></a>
+          <div class="support__content__title">Поддерживающая уборка</div>
+          <div class="support__content__txt">На поддерживающую уборку Клинер приезжает самостоятельно, привозит с собой оборудование (необходимость пылесоса обговаривается заране): </div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ комплект профессиональной химии</li>
+            <li class="support__content__list__item">+ протирочный материал ( комплект салфеток, согласно цветовому кодированию) </li>
+            <li class="support__content__list__item">+ уборочный инвентарь ( швабры, мопы, ведро)</li>
+          </ul>
+          <div class="support__content__subtitle">Что входит в поддерживающую уборку:</div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ Собрать и вынести мусор</li>
+            <li class="support__content__list__item">+ Собрать и сложить одежду</li>
+            <li class="support__content__list__item">+ Протереть светильники несложных конструкций</li>
+            <li class="support__content__list__item">+ Вытереть пыль со всех элементов декора и интерьера,с корпусной мебели, техники и расставить вещи по местам</li>
+            <li class="support__content__list__item">+ Очистить зеркала и стеклянные поверхности </li>
+            <li class="support__content__list__item">+ Пропылесосить всю мягкую мебель</li>
+            <li class="support__content__list__item">+ Протереть подоконники и радиаторы</li>
+            <li class="support__content__list__item">+ Протереть кухонный фасад, фартук, вытяжку</li>
+            <li class="support__content__list__item">+ Помыть посуду в раковине</li>
+            <li class="support__content__list__item">+ Протереть бытовую технику, холодильник снаружи</li>
+            <li class="support__content__list__item">+ Протереть микроволновую печь снаружи</li>
+            <li class="support__content__list__item">+ Помыть раковину на кухне, смеситель, столешницу и варочную панель</li>
+            <li class="support__content__list__item">+ Помыть и продезинфицировать душевую кабину, ванну, сантехнику, смесители</li>
+            <li class="support__content__list__item">+ Вымыть унитаз</li>
+            <li class="support__content__list__item">+ Протереть шкафчики в ванной комнате снаружи и открытые полки</li>
+            <li class="support__content__list__item">+ Протереть стиральную машину</li>
+            <li class="support__content__list__item">+ Протереть все двери и дверные проемы, наличники, продезинфицировать дверные ручки, выключатели</li>
+            <li class="support__content__list__item">+ Произвести сухую уборку напольных и ковровых покрытий, вымыть пол</li>
+          </ul>
+          <div class="support__content__subtitle">- НЕ входит удаление сложных загрязнений.</div>
+        </div>
+      </div>
+    </div>
+    <div class="support" id="general">
+      <div class="support__body">
+        <div class="support__content"><a class="support__content__close" href="#header"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.6"><path d="M31.5513 2.84106L29.3409 0.656839C28.7427 0.0587079 27.7545 0.0587079 27.1304 0.656839L16.104 11.683L4.86976 0.448793C4.27137 -0.149598 3.28315 -0.149598 2.65928 0.448793L0.448793 2.65928C-0.149598 3.25741 -0.149598 4.24562 0.448793 4.86976L11.6572 16.0782L0.656839 27.1306C0.0587079 27.7288 0.0587079 28.717 0.656839 29.3411L2.86732 31.5516C3.46545 32.1497 4.45367 32.1497 5.07781 31.5516L16.104 20.5252L27.1304 31.5516C27.7285 32.1497 28.7167 32.1497 29.3409 31.5516L31.5513 29.3411C32.1495 28.743 32.1495 27.7548 31.5513 27.1306L20.4989 16.1042L31.5253 5.07807C32.1495 4.45341 32.1495 3.46519 31.5513 2.84106Z" fill="white"/></g></svg></a>
+          <div class="support__content__title">Генеральная уборка</div>
+          <div class="support__content__txt">На генеральную уборку приезжает клинер и менеджер, привозят с собой всё необходимое оборудование: </div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ комплект профессиональной химии</li>
+            <li class="support__content__list__item">+ протирочный материал ( комплект салфеток, согласно цветовому кодированию) </li>
+            <li class="support__content__list__item">+ уборочный инвентарь ( швабры, мопы, ведро)</li>
+            <li class="support__content__list__item">+ пылесос </li>
+            <li class="support__content__list__item">+ пароочиститель</li>
+            <li class="support__content__list__item">+ стремянку</li>
+          </ul>
+          <div class="support__content__subtitle">Что входит в уборку комнат и коридора:</div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ Собрать и вынести мусор</li>
+            <li class="support__content__list__item">+ Обеспылить стены и потолки</li>
+            <li class="support__content__list__item">+ Помыть все осветительные приборы( несложной конструкции- ракушка, круг, шар; хрустальные люстры и люстры сложной конструкции оплачиваются по доп. прайсу)</li>
+            <li class="support__content__list__item">+ Протереть подоконники</li>
+            <li class="support__content__list__item">+ Промыть радиаторы</li>
+            <li class="support__content__list__item">+ Вытереть пыль со всех элементов декора и интерьера, с корпусной мебели, техники расставить вещи по местам</li>
+            <li class="support__content__list__item">+ Почистить зеркала и стеклянные поверхности </li>
+            <li class="support__content__list__item">+ Собрать и сложить одежду</li>
+            <li class="support__content__list__item">+ Отодвинуть нетяжелую мебель (с разрешения клиента) и устранить загрязнения за ними</li>
+            <li class="support__content__list__item">+ Пропылесосить всю мягкую мебель</li>
+            <li class="support__content__list__item">+ Произвести сухую уборку напольных и ковровых покрытий</li>
+            <li class="support__content__list__item">+ Помыть двери, дверной проем, наличники, продезинфицировать дверные ручки</li>
+            <li class="support__content__list__item">+ Протрем плинтуса и вымоем пол</li>
+          </ul>
+          <div class="support__content__subtitle">Что входит в уборку ванной комнаты и санузла: </div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ Собрать и вынести мусор</li>
+            <li class="support__content__list__item">+ Помыть плитку от потолка до пола</li>
+            <li class="support__content__list__item">+ Помыть вентиляционные решетки</li>
+            <li class="support__content__list__item">+ Протереть от пыли светильники, розетки, стеклянные поверхности</li>
+            <li class="support__content__list__item">+ Помыть стены, двери, дверной проем, наличники, продезинфицировать дверные ручки и выключатели</li>
+            <li class="support__content__list__item">+ Помыть шкафчики снаружи и все открытые полки</li>
+            <li class="support__content__list__item">+ Протереть стиральную машину и за ней</li>
+            <li class="support__content__list__item">+ Помыть и продезинфицировать душевую кабину, ванну,сантехнику, смеситель, удалить водный камень</li>
+            <li class="support__content__list__item">+ Помыть унитаз, удалить мочевой камень</li>
+            <li class="support__content__list__item">+ Произвести сухую уборку напольных и ковровых покрытий и вымыть пол</li>
+          </ul>
+          <div class="support__content__subtitle">Что входит в уборку кухни: </div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ Собрать и вынести мусор, заменить мусорный пакет </li>
+            <li class="support__content__list__item">+ Обеспылить стены и потолки</li>
+            <li class="support__content__list__item">+ Очистить подоконные радиаторы и протереть подоконник.</li>
+            <li class="support__content__list__item">+ Убрать пыль со всех доступных поверхностей</li>
+            <li class="support__content__list__item">+ Очистить от жира кухонный фасад, фартук, вытяжку</li>
+            <li class="support__content__list__item">+ Помыть шкафчики снаружи и все открытые полки</li>
+            <li class="support__content__list__item">+ Помыть посуду в раковине</li>
+            <li class="support__content__list__item">+ Протереть бытовую технику </li>
+            <li class="support__content__list__item">+ Помыть холодильник снаружи </li>
+            <li class="support__content__list__item">+ Помыть микроволновку снаружи</li>
+            <li class="support__content__list__item">+ Помыть раковину, смеситель, столешницу и варочную панель</li>
+            <li class="support__content__list__item">+ Помыть двери, дверной проем, наличники, продезинфицировать дверные ручки и выключатели</li>
+            <li class="support__content__list__item">+ Произвести сухую уборку напольных и ковровых покрытий,вымыть пол.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="support" id="after">
+      <div class="support__body">
+        <div class="support__content"><a class="support__content__close" href="#header"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.6"><path d="M31.5513 2.84106L29.3409 0.656839C28.7427 0.0587079 27.7545 0.0587079 27.1304 0.656839L16.104 11.683L4.86976 0.448793C4.27137 -0.149598 3.28315 -0.149598 2.65928 0.448793L0.448793 2.65928C-0.149598 3.25741 -0.149598 4.24562 0.448793 4.86976L11.6572 16.0782L0.656839 27.1306C0.0587079 27.7288 0.0587079 28.717 0.656839 29.3411L2.86732 31.5516C3.46545 32.1497 4.45367 32.1497 5.07781 31.5516L16.104 20.5252L27.1304 31.5516C27.7285 32.1497 28.7167 32.1497 29.3409 31.5516L31.5513 29.3411C32.1495 28.743 32.1495 27.7548 31.5513 27.1306L20.4989 16.1042L31.5253 5.07807C32.1495 4.45341 32.1495 3.46519 31.5513 2.84106Z" fill="white"/></g></svg></a>
+          <div class="support__content__title">Уборка после ремонта</div>
+          <div class="support__content__txt">На уборку после ремонта приезжают 2 клинера и менеджер, привозят с собой всё необходимое оборудование:</div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ комплект профессиональной химии</li>
+            <li class="support__content__list__item">+ протирочный материал ( комплект салфеток, согласно цветовому кодированию) </li>
+            <li class="support__content__list__item">+ уборочный инвентарь ( швабры, мопы, ведро)</li>
+            <li class="support__content__list__item">+ пылесос для послестроительной уборки </li>
+            <li class="support__content__list__item">+ пароочиститель</li>
+            <li class="support__content__list__item">+ стремянку</li>
+          </ul>
+          <div class="support__content__subtitle">Что входит в уборку после ремонта:</div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ Сбор и вынос мусора до 5 кг </li>
+            <li class="support__content__list__item">+ Удаление с поверхностей остатков строительных смесей, цемента и пр.</li>
+            <li class="support__content__list__item">+ Очищение осветительных приборов </li>
+            <li class="support__content__list__item">+ Обеспыливание стен и потолка </li>
+            <li class="support__content__list__item">+ Очищение радиаторов с помощью парогенератора</li>
+            <li class="support__content__list__item">+ Обеспыливание всех элементов декора и интерьера</li>
+            <li class="support__content__list__item">+ Очищение зеркал и стеклянных поверхностей</li>
+            <li class="support__content__list__item">+ Очищение дверей, дверного проема , наличников , дезинфекция дверных ручек</li>
+            <li class="support__content__list__item">+ Мытье и дезинфекция душевой кабины, ванны, сантехники, смесителей.</li>
+            <li class="support__content__list__item">+ Устранение строительной пыли с кухонной мебели, внутри и снаружи. </li>
+            <li class="support__content__list__item">+ Сухая уборка напольных покрытий и мытьё пола </li>
+          </ul>
+          <div class="support__content__txt">Окончательная стоимость определяется менеджером до начала уборки и складывается из характера загрязнений и площади помещения. </div>
+          <div class="support__content__txt">Выезд менеджера для оценки стоимости и подбора химии для уборки<br><span>БЕСПЛАТНО!</span></div>
+          <div class="support__content__txt">Уборка перед выпиской ( рождение ребёнка) входит все , что в генеральную только эко средствами для уборки и это плюс <span>20%</span> к стоимости. </div>
+        </div>
+      </div>
+    </div>
+    <div class="support" id="windows">
+      <div class="support__body">
+        <div class="support__content"><a class="support__content__close" href="#header"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.6"><path d="M31.5513 2.84106L29.3409 0.656839C28.7427 0.0587079 27.7545 0.0587079 27.1304 0.656839L16.104 11.683L4.86976 0.448793C4.27137 -0.149598 3.28315 -0.149598 2.65928 0.448793L0.448793 2.65928C-0.149598 3.25741 -0.149598 4.24562 0.448793 4.86976L11.6572 16.0782L0.656839 27.1306C0.0587079 27.7288 0.0587079 28.717 0.656839 29.3411L2.86732 31.5516C3.46545 32.1497 4.45367 32.1497 5.07781 31.5516L16.104 20.5252L27.1304 31.5516C27.7285 32.1497 28.7167 32.1497 29.3409 31.5516L31.5513 29.3411C32.1495 28.743 32.1495 27.7548 31.5513 27.1306L20.4989 16.1042L31.5253 5.07807C32.1495 4.45341 32.1495 3.46519 31.5513 2.84106Z" fill="white"/></g></svg></a>
+          <div class="support__content__title">Мойка окон</div>
+          <div class="support__content__txt-left">Привозим все необходимое оборудование: </div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ комплект профессиональной химии</li>
+            <li class="support__content__list__item">+ набор салфеток </li>
+            <li class="support__content__list__item">+ уборочный инвентарь ( швабры, мопы, ведро)</li>
+            <li class="support__content__list__item">+ пылесос для послестроительной уборки </li>
+            <li class="support__content__list__item">+ пароочиститель</li>
+            <li class="support__content__list__item">+ при необходимости Клинер привозит с собой стремянку</li>
+          </ul>
+          <div class="support__content__subtitle">Что входит в мойку окон:</div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ Очищение стекла от различного вида загрязнений</li>
+            <li class="support__content__list__item">+ Очищение рамы</li>
+            <li class="support__content__list__item">+ Очищение подоконника и откосов</li>
+          </ul>
+          <div class="support__content__subtitle">Стоимость работ: </div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">1 - створчатое окно - 250 руб.</li>
+            <li class="support__content__list__item">2 - створчатое - 480 руб.</li>
+            <li class="support__content__list__item">3 - створчатое - 600 руб.</li>
+            <li class="support__content__list__item">Балконная группа (дверь+окно) -от 750 руб.</li>
+          </ul>
+          <div class="support__content__txt">Окна после ремонта со следами затирки, цемента, скотча, защитной плёнки, стоимость увеличивается на <span>30%</span></div>
+          <div class="support__content__txt">Мойка окон в зимний период <span>+70%</span> к прайсу</div>
+          <div class="support__content__subtitle">Дополнительные услуги не входящие в комплекс:</div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">Помыть холодильник внутри- 500 руб.</li>
+            <li class="support__content__list__item">Помыть микроволновую печь внутри - 300 руб.</li>
+            <li class="support__content__list__item">Помыть духовой шкаф внутри - 500 руб. </li>
+            <li class="support__content__list__item">Помыть стиральную машину - 500 руб.</li>
+            <li class="support__content__list__item">Помыть внутри кухонных шкафов - от 80 руб. 1 шкаф </li>
+            <li class="support__content__list__item">Мытьё люстры сложной конструкции от 800₽ за 1 шт </li>
+          </ul>
+          <div class="support__content__txt">Очищение межплиточных швов <span>+ 20%</span> к прайсу</div>
+        </div>
+      </div>
+    </div>
+    <div class="support" id="office">
+      <div class="support__body">
+        <div class="support__content"><a class="support__content__close" href="#header"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.6"><path d="M31.5513 2.84106L29.3409 0.656839C28.7427 0.0587079 27.7545 0.0587079 27.1304 0.656839L16.104 11.683L4.86976 0.448793C4.27137 -0.149598 3.28315 -0.149598 2.65928 0.448793L0.448793 2.65928C-0.149598 3.25741 -0.149598 4.24562 0.448793 4.86976L11.6572 16.0782L0.656839 27.1306C0.0587079 27.7288 0.0587079 28.717 0.656839 29.3411L2.86732 31.5516C3.46545 32.1497 4.45367 32.1497 5.07781 31.5516L16.104 20.5252L27.1304 31.5516C27.7285 32.1497 28.7167 32.1497 29.3409 31.5516L31.5513 29.3411C32.1495 28.743 32.1495 27.7548 31.5513 27.1306L20.4989 16.1042L31.5253 5.07807C32.1495 4.45341 32.1495 3.46519 31.5513 2.84106Z" fill="white"/></g></svg></a>
+          <div class="support__content__title">Уборка офисов и коммерческих помещений</div>
+          <div class="support__content__txt-left">Ориентировочный список работ: </div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ Влажная уборка твердых полов</li>
+            <li class="support__content__list__item">+ Уборка ковролина пылесосом </li>
+          </ul>
+          <div class="support__content__subtitle">ЕЖЕДНЕВНО: </div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ Сбор мусора из мусорных корзин и замена полиэтиленовых пакето</li>
+            <li class="support__content__list__item">+ Подготовка и вынос мусора к местам накопления и загрузка в контейнеры</li>
+            <li class="support__content__list__item">+ Удаление пыли с горизонтальных поверхностей мебели, расположенной на высоте менее двух метров от пола без перемещения настольных предметов и документов</li>
+            <li class="support__content__list__item">+ Протирка дверных ручек и удаление локальных загрязнений с дверных проемов</li>
+            <li class="support__content__list__item">+ Удаление локальных загрязнений с остекления интерьера (зеркала, перегородки, дверцы шкафов, за исключением окон) с использованием ручного инвентаря, расположенных на высоте менее двух метров от пола</li>
+            <li class="support__content__list__item">+ Протирка подоконников внутри помещений</li>
+            <li class="support__content__list__item">+ Удаление локальных загрязнений со стен (если позволяет характер покрытия)</li>
+            <li class="support__content__list__item">+ Удаление локальных загрязнений с батарей, радиаторов, декоративных экранов радиаторов.</li>
+            <li class="support__content__list__item">+ Комплексная уборка санузлов по графику в течение дня (чистка сантехники, натирка зеркал, протирка унитазов, раковин, сбор мусорных мешков, мытье полов, замена расходных материалов)</li>
+            <li class="support__content__list__item">+ Комплексная уборка комнаты для приема пищи (протирка горизонтальных поверхностей, столов, удаление локальных загрязнений с кухонного гарнитура, сбор мусорных мешков, мытье полов, мытье посуды, протирка микроволновых печей)</li>
+          </ul>
+          <div class="support__content__subtitle">По мере необходимости: </div>
+          <ul class="support__content__list">
+            <li class="support__content__list__item">+ Уборка пыли с мебели на высоте более 2-х метров. 2 раза в месяц</li>
+            <li class="support__content__list__item">+ Протирка плинтусов  1 раз в месяц </li>
+            <li class="support__content__list__item">+ Протирка внутри холодильников </li>
+            <li class="support__content__list__item">+ Мойка изнутри микроволновой печи</li>
+            <li class="support__content__list__item">+ Мойка и дезинфекция мусорных корзин </li>
+            <li class="support__content__list__item">+ Очистка корпусов инженерного оборудования (вентиляционные короба и решетки, электрические короба, выключатели, розетки, радиаторы отопления, трубы водоснабжения и отопления) на высоте не более 2 метров</li>
+          </ul>
+          <div class="support__content__txt">+ Очистка корпусов инженерного оборудования (вентиляционные короба и решетки, электрические короба, выключатели, розетки, радиаторы отопления, трубы водоснабжения и отопления) на высоте не более 2 метров</div>
+          <div class="support__content__txt">Выезд на обЪект для составления ТЗ и расчета сметы - <span>БЕСПЛАТНО!</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="popupcases" id="popupcases">
+      <div class="popupcases__body">
+        <div class="popupcases__content"><a class="popupcases__content__close" href="#header"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.6"><path d="M31.5513 2.84106L29.3409 0.656839C28.7427 0.0587079 27.7545 0.0587079 27.1304 0.656839L16.104 11.683L4.86976 0.448793C4.27137 -0.149598 3.28315 -0.149598 2.65928 0.448793L0.448793 2.65928C-0.149598 3.25741 -0.149598 4.24562 0.448793 4.86976L11.6572 16.0782L0.656839 27.1306C0.0587079 27.7288 0.0587079 28.717 0.656839 29.3411L2.86732 31.5516C3.46545 32.1497 4.45367 32.1497 5.07781 31.5516L16.104 20.5252L27.1304 31.5516C27.7285 32.1497 28.7167 32.1497 29.3409 31.5516L31.5513 29.3411C32.1495 28.743 32.1495 27.7548 31.5513 27.1306L20.4989 16.1042L31.5253 5.07807C32.1495 4.45341 32.1495 3.46519 31.5513 2.84106Z" fill="white"/></g></svg></a>
+          <div class="popupcases__content__cases">
+            <div class="popupcases__content__case"><img src="../img/case-1.png" alt=""/></div>
+            <div class="popupcases__content__case"><img src="../img/case-2.png" alt=""/></div>
+            <div class="popupcases__content__case"><img src="../img/case-3.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="../js/burger.js"></script>
+    <script src="../js/popups.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/slider.js"></script>
+  </body>
+</html>

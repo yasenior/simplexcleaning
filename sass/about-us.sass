@@ -1,0 +1,131 @@
+.about-us
+    margin-top: 53px
+    display: flex
+    justify-content: center
+    &__container
+        width: 1220px
+        display: flex
+        justify-content: center
+    &__info
+        width: 1061px
+        display: flex
+        flex-direction: column
+    &__top
+        display: flex
+        width: 100%
+        &__block
+            width: 215px
+            height: 5px
+            background: #00445B
+    &__middle
+        display: flex
+        &__block-blue
+            height: 122px
+            width: 5px
+            background: #00445B
+            margin-right: 59px
+        &__txt
+            margin-top: 15px
+            width: 941px
+            font-family: Montserrat
+            font-style: normal
+            font-weight: 300
+            font-size: 17px
+            line-height: 145.4%
+            text-align: center
+            font-variant: small-caps
+            color: #000000
+            margin-right: 58px
+            br
+                display: none
+            span
+                font-family: Montserrat
+                font-style: normal
+                font-weight: 500
+                font-size: 22px
+                line-height: 145.4%
+                text-align: center
+                font-variant: small-caps
+                text-transform: uppercase
+                color: #00445B
+        &__block-yellow
+            width: 5px
+            height: 122px
+            background: #FFED00
+            align-self: flex-end
+    &__bottom
+        display: flex
+        flex-direction: column
+        width: 100%
+        &__block
+            width: 215px
+            height: 5px
+            background: #FFED00
+            align-self: flex-end
+@media( max-width: 1440px )
+    .about-us
+        &__container
+            width: 1024px
+@media( max-width: 1024px ) 
+    .about-us
+        margin-top: 24px
+        &__container
+            width: 900px
+        &__info
+            width: 878px
+        &__middle
+            &__block-blue
+                margin-right: 140px
+            &__txt
+                margin-top: 12px
+                width: 615px
+                margin-right: 113px     
+@media( max-width: 834px ) 
+    .about-us
+        &__container
+            width: 768px
+        &__info
+            width: 722px
+        &__middle
+            &__block-blue
+                margin-right: 45px
+            &__txt
+                margin-right: 52px
+@media( max-width: 768px ) 
+     .about-us
+        &__container
+            width: 100%
+        &__info
+            width: 647px
+        &__middle
+            &__block-blue
+                margin-right: 9px
+            &__txt
+                width: 615px
+                margin-right: 13px
+@media( max-width: 767px ) 
+     .about-us
+        margin-top: 8px
+        &__container
+            width: 100%
+        &__info
+            width: 296px
+        &__top
+            display: none
+        &__bottom
+            display: none
+        &__middle
+            &__block-blue
+               display: none
+            &__block-yellow
+                display: none
+            &__txt
+                width: 296px
+                margin-right: 0
+                br
+                    display: inline
+                
+
+
+
+

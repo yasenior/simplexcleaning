@@ -1,0 +1,233 @@
+body.lock
+    overflow: hidden   
+.support
+    position: fixed
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.8)
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    overflow-y: auto
+    overflow-x: hidden
+    transition: all 0.8s ease 0s
+    &:target
+        opacity: 1
+        visibility: visible
+    &__body
+        min-height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+    &__content
+        background: rgba(0, 68, 91, 0.5)
+        backdrop-filter: blur(45px)
+        border-radius: 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-top: 14px
+        padding-bottom: 62px
+        padding-left: 10px
+        padding-right: 10px
+        width: 924px
+        margin-top: 100px
+        position: relative
+        &__close
+            align-self: flex-end
+            svg path
+                transition: all 0.3s
+            &:hover
+                svg path
+                    transition: all 0.3s
+                    fill: #000000
+        &__title
+            font-family: Montserrat
+            font-style: normal
+            font-weight: 300
+            font-size: 45px
+            line-height: 99.9%
+            text-align: center
+            font-variant: small-caps
+            color: #FFFFFF
+        &__txt
+            margin-top: 58px
+            font-family: Montserrat
+            font-style: normal
+            font-weight: 300
+            font-size: 17px
+            line-height: 145.4%
+            text-align: center
+            font-variant: small-caps
+            color: #FFFFFF
+            span
+                font-size: 25px
+                margin-top: 10px
+        &__txt-left
+            margin-top: 58px
+            font-family: Montserrat
+            font-style: normal
+            font-weight: 300
+            font-size: 17px
+            line-height: 145.4%
+            font-variant: small-caps
+            color: #FFFFFF
+            align-self: flex-start
+            span
+                font-size: 25px
+                margin-top: 10px
+        &__list
+            margin-top: 14px
+            display: flex
+            flex-direction: column
+            align-self: flex-start
+            align-items: flex-start
+            &__item
+                font-family: Montserrat
+                font-style: normal
+                font-weight: 300
+                font-size: 17px
+                line-height: 145.4%
+                font-variant: small-caps
+                color: #FFFFFF
+        &__subtitle
+            font-family: Montserrat
+            font-style: normal
+            font-weight: normal
+            font-size: 23px
+            line-height: 145.4%
+            text-align: center
+            font-variant: small-caps
+            color: #FFFFFF
+            margin-top: 20px
+@media( max-width: 992px ) 
+    .support
+        &__content
+            width: 680px
+            padding-top: 14px
+            padding-left: 15px
+            padding-right: 15px
+            padding-bottom: 69px
+            &__title
+                margin-top: 23px
+                font-size: 35px
+@media( max-width: 768px ) 
+    .support
+        &__content
+            width: 300px
+            padding-top: 7px
+            padding-right: 13px
+            padding-left: 13px
+            padding-bottom: 32px
+            &__close
+                svg
+                    width: 22px
+                    height: 22px
+            &__title
+                margin-top: 17px
+                font-size: 25px
+.popupcases
+    position: fixed
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.8)
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    overflow-y: auto
+    overflow-x: hidden
+    transition: all 0.8s ease 0s
+    &:target
+        opacity: 1
+        visibility: visible
+    &__body
+        min-height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+    &__content
+        display: flex
+        padding-top: 16px
+        padding-left: 75px
+        padding-right: 75px
+        padding-bottom: 106px
+        background: rgba(0, 68, 91, 0.25)
+        border-radius: 10px
+        display: flex
+        flex-direction: column
+        margin-top: 100px
+        &__close
+            align-self: flex-end
+            svg path
+                transition: all 0.3s
+            &:hover
+                svg path
+                    transition: all 0.3s
+                    fill: #000000
+        &__cases
+            margin-top: 55px
+            display: flex
+        &__case
+            border: 13px solid  rgba(0, 68, 91)
+            margin-right: 20px
+            &:last-child
+                margin-right: 0
+@media( max-width: 1024px )
+    .popupcases
+        &__content
+            width: 802px
+            padding-top: 8px
+            padding-right: 34px
+            padding-left: 34px
+            padding-bottom: 39px
+            &__cases
+                margin-top: 11px
+            &__case
+                margin-right: 9px
+                border: 7px solid  rgba(0, 68, 91)
+                img
+                    width: 222px
+@media( max-width: 834px )
+    .popupcases
+        &__content
+            width: 659px
+            padding-top: 4px
+            padding-right: 16px
+            padding-left: 16px
+            padding-bottom: 22px
+            &__close
+                svg
+                    width: 20px
+            &__cases
+                margin-top: 12px
+            &__case
+                border: 6px solid  rgba(0, 68, 91)
+                margin-right: 7px
+                img
+                    width: 190px
+@media( max-width: 768px )
+    .popupcases
+        &__content
+            width: 279px
+            padding-top: 13px
+            padding-left: 15px
+            padding-right: 15px
+            padding-bottom: 44px
+            &__cases
+                flex-direction: column
+                align-items: center
+                margin-top: 14px
+            &__case
+                margin-right: 0
+                margin-top: 10px
+                &:first-child
+                    margin-top: 0
+                img
+                    width: 222px
+
+
+
+
+

@@ -1,0 +1,149 @@
+.header
+    display: flex
+    justify-content: center
+    background: rgba(0, 56, 80, 0.2)
+    position: fixed
+    top: 0
+    right: 0
+    width: 100%
+    border-bottom: 1px solid #000000
+    z-index: 2
+    &__container
+        padding-top: 10px
+        padding-bottom: 10px
+        display: flex
+        width: 1220px
+        justify-content: space-between
+        align-items: center
+    &__nav
+        display: flex
+        &__item
+            margin-right: 75px
+            &:last-child
+                margin-right: 0
+            a
+                font-family: Montserrat
+                font-style: normal
+                font-weight: 600
+                font-size: 20px
+                line-height: 24px
+                text-transform: uppercase
+                color: #FFFFFF
+                transition: all 0.3s
+                &:hover
+                    color: #FFED00
+                    transition: all 0.3s
+    &__social-media
+        display: flex
+        a
+            margin-right: 13px
+            &:last-child
+                margin-right: 0
+            svg path
+                transition: all 0.3s
+            &:hover
+                svg path
+                    transition: all 0.3s
+                    fill: #FFED00
+    &__burger
+        display: none
+    &__burger-menu
+        display: none
+@media( max-width: 1220px )
+    .header
+        &__container
+            width: 992px
+@media( max-width: 992px ) 
+    .header
+        &__container
+            width: 768px
+        &__nav
+            display: none
+        &__social-media
+            display: none
+        &__burger
+            display: block
+            width: 47px
+            height: 31px
+            position: relative
+            left: 14px
+            transition: all 0.3s
+            z-index: 5
+            &::before
+                content: ''
+                background: rgba(255, 255, 255, 0.89)
+                width: 37px
+                height: 2px
+                position: absolute
+                top: 8px
+                left: 4px
+                transition: all 0.3s
+                transition: all 0.3s ease 0s
+            &::after
+                content: ''
+                background: rgba(255, 255, 255, 0.89)
+                width: 37px
+                height: 2px
+                position: absolute
+                bottom: 7px
+                left: 4px
+                transition: all 0.3s
+                transition: all 0.3s ease 0s
+            span
+                background: rgba(255, 255, 255, 0.89)
+                width: 37px
+                height: 2px
+                position: absolute 
+                top: 15px
+                left: 4px
+                transition: all 0.3s
+                transition: all 0.3s ease 0s
+        &__burger.active
+            &::before
+                transform: rotate(45deg)
+                top: 14px
+                transition: all 0.3s ease 0s
+            &::after
+                transform: rotate(-45deg)
+                bottom: 14px
+                transition: all 0.3s ease 0s
+            span
+                transform: scale(0)
+                transition: all 0.3s ease 0s
+        &__burger-menu
+            display: flex
+            justify-content: center
+            top: -100%
+            left: 0
+            width: 100%
+            height: 300px
+            position: fixed
+            background: rgba(0, 56, 80, 0.9)
+            padding-top: 50px
+            transition: all 0.3s
+            &__list
+                display: flex
+                flex-direction: column
+                align-items: center
+                &__item
+                    margin-top: 20px
+                    &:first-child
+                        margin-top: 0px
+                    &__link
+                        font-family: Montserrat
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 16px
+                        line-height: 102.5%
+                        text-align: center
+                        letter-spacing: 0.065em
+                        text-transform: uppercase
+                        color: #FFFFFF
+        &__burger-menu.active
+            top: 0
+            transition: all 0.3s
+@media( max-width: 768px )
+    .header
+        &__container
+            width: 90%
+    

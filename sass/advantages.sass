@@ -1,0 +1,96 @@
+.advantages
+    display: flex
+    justify-content: center
+    margin-top: 23px
+    &__container
+        width: 1220px
+        display: flex
+        justify-content: center
+    &__list
+        display: flex
+        justify-content: space-between
+        &__item
+            display: flex
+            flex-direction: column
+            margin-right: 60px
+            align-items: center
+            &:last-child
+                margin-right: 0
+            &__title
+                margin-top: 28px
+                font-family: Montserrat
+                font-style: normal
+                font-weight: 500
+                font-size: 21px
+                line-height: 99.9%
+                text-align: center
+                font-variant: small-caps
+                color: #00445B
+            &__txt
+                margin-top: 26px
+                font-family: Montserrat
+                font-style: normal
+                font-weight: 300
+                font-size: 19px
+                line-height: 99.9%
+                text-align: center
+                font-variant: small-caps
+                color: #000000
+            &__txt-2
+                margin-top: 42px
+                font-family: Montserrat
+                font-style: normal
+                font-weight: 300
+                font-size: 19px
+                line-height: 99.9%
+                text-align: center
+                font-variant: small-caps
+                color: #000000
+@media( max-width: 1440px )
+    .advantages
+        &__container
+            width: 992px
+@media( max-width: 992px ) 
+    .advantages
+        margin-top: 24px
+        &__container
+            width: 768px
+        &__list
+            width: 590px
+            flex-wrap: wrap
+            &__item
+                margin-right: 0
+                margin-top: 70px
+            &__item-1
+                margin-right: 20px
+@media( max-width: 768px ) 
+     .advantages
+        &__container
+            width: 100%
+        &__list
+            width: 229px
+            justify-content: center
+            &__item
+                margin-top: 40px
+            &__item-1
+                margin-right: 0
+     .about-us
+        margin-top: 8px
+        &__container
+            width: 100%
+        &__info
+            width: 296px
+        &__top
+            display: none
+        &__bottom
+            display: none
+        &__middle
+            &__block-blue
+               display: none
+            &__block-yellow
+                display: none
+            &__txt
+                width: 296px
+                margin-right: 0
+                br
+                    display: inline

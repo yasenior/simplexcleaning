@@ -1,0 +1,215 @@
+.footer
+    display: flex
+    justify-content: center
+    margin-top: 42px
+    background: url('../img/footer-1.png') center no-repeat
+    background-size: cover
+    &__container
+        width: 1220px
+        display: flex
+        margin-top: 109px
+        flex-direction: column
+        margin-bottom: 200px
+    &__logos
+        &__logo-2
+            display: none
+    &__content
+        display: flex
+    &__info
+        display: flex
+        flex-direction: column
+        margin-right: 187px
+        margin-top: 30px
+        &__txt
+            width: 368px
+            font-family: Montserrat
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 24px
+            text-transform: uppercase
+            color: #FFFFFF
+        &__links
+            margin-top: 26px
+            display: flex
+            &__list
+                display: flex
+                flex-direction: column
+                margin-right: 99px
+                &__item
+                    margin-top: 19px
+                    &:first-child
+                        margin-top: 0
+                    a
+                        font-family: Montserrat
+                        font-style: normal
+                        font-weight: 600
+                        font-size: 20px
+                        line-height: 24px
+                        text-transform: uppercase
+                        color: #FFFFFF
+                        transition: all 0.3s
+                        &:hover
+                            transition: all 0.3s
+                            color: #FFED00
+            &__social-media
+                align-self: flex-end
+                display: flex
+                &__link
+                    margin-right: 22px
+                    &:last-child
+                        margin-right: 0
+                    svg path
+                        transition: all 0.3s
+                    &:hover
+                        svg path
+                            fill: #FFED00
+                            transition: all 0.3s
+    &__form
+        margin-top: 10px
+        display: flex
+        flex-direction: column
+        margin-right: 64px
+        &__txt
+            width: 335px
+            font-family: Montserrat
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 125.9%
+            font-variant: small-caps
+            color: #FFFFFF
+        &__block
+            display: flex
+            flex-direction: column
+            &:first-child
+                margin-top: 13px
+            &__label
+                font-family: Montserrat
+                font-style: normal
+                font-weight: normal
+                font-size: 23px
+                line-height: 28px
+                color: #FFFFFF
+            input
+                margin-top: 2px
+                width: 349px
+                border: 0.2px solid #00445B
+                border-radius: 10px
+                padding-top: 11px
+                padding-bottom: 12px
+                padding-left: 14px
+                font-family: Montserrat
+                font-style: normal
+                font-weight: 500
+                font-size: 20px
+                line-height: 24px
+                color: #BEBDBD
+        &__button
+            margin-top: 31px
+            button
+                font-family: Montserrat
+                font-style: normal
+                font-weight: normal
+                font-size: 30px
+                line-height: 106.9%
+                text-align: center
+                text-transform: uppercase
+                color: #FFFFFF
+                border: 1px solid #FFED00
+                border-radius: 10px
+                background: transparent
+                padding: 8px 76px
+                transition: all 0.3s
+                &:hover
+                    background:#FFED00
+                        transition: all 0.3s
+    &__logo-2
+        height: 100%
+        display: flex
+        &__image
+            align-self: flex-end
+            img
+                height: 130px
+@media( max-width: 1440px )
+    .footer
+        background: url('../img/footer-1.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 1200px
+            margin-bottom: 150px
+@media( max-width: 1024px ) 
+    .footer
+        background: url('../img/footer-3.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 834px
+        &__logos
+            display: flex
+            &__logo-1
+                margin-right: 30px
+            &__logo-2
+                display: block
+        &__info
+            margin-right: 46px
+        &__logo-2
+            display: none
+    .mainscreen
+        background: url('../img/mainscreen-bg-4.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 768px
+@media( max-width: 833px ) 
+     .footer
+        background: url('../img/footer-4.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 768px
+@media( max-width: 767px ) 
+    .footer
+        background: url('../img/footer-6.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 320px
+            margin-top: 104px
+            margin-bottom: 150px
+        &__logos
+            &__logo-1
+                img
+                    width: 141px
+            &__logo-2
+                img
+                    width: 38px
+        &__content
+            flex-direction: column
+            margin-top: 29px
+            align-items: center
+        &__info
+            margin-right: 0
+            &__txt
+                width: 300px
+                font-size: 20px
+            &__links
+                &__list
+                    margin-right: 50px
+        &__form
+            margin-top: 30px
+            margin-right: 0
+            &__txt
+                width: 300px
+                font-size: 20px
+            &__block
+                input 
+                    width: 300px
+            &__button
+                button
+                    font-size: 29px
+                    padding: 8px 56px
+@media( max-width: 320px ) 
+    .mainscreen
+        background: url('../img/mainscreen-bg-7.png') center no-repeat
+        background-size: cover
+        &__container
+            width: 95%
+        
+        
